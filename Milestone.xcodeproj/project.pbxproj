@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A318A582BEBDD5500F4C38F /* AnimatedGradBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A318A572BEBDD5500F4C38F /* AnimatedGradBackground.swift */; };
 		5A84C8DA2BECABCF004D0687 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84C8D92BECABCF004D0687 /* SettingsView.swift */; };
-		5A9B7CC32BEA5653008BE6BC /* Milestones_test_learningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B7CC22BEA5653008BE6BC /* Milestones_test_learningApp.swift */; };
+		5A9B7CC32BEA5653008BE6BC /* MilestoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B7CC22BEA5653008BE6BC /* MilestoneApp.swift */; };
 		5A9B7CC52BEA5653008BE6BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B7CC42BEA5653008BE6BC /* ContentView.swift */; };
 		5A9B7CC72BEA5654008BE6BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9B7CC62BEA5654008BE6BC /* Assets.xcassets */; };
 		5A9B7CCA2BEA5654008BE6BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9B7CC92BEA5654008BE6BC /* Preview Assets.xcassets */; };
@@ -20,8 +20,8 @@
 /* Begin PBXFileReference section */
 		5A318A572BEBDD5500F4C38F /* AnimatedGradBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGradBackground.swift; sourceTree = "<group>"; };
 		5A84C8D92BECABCF004D0687 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		5A9B7CBF2BEA5653008BE6BC /* Milestones test learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milestones test learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A9B7CC22BEA5653008BE6BC /* Milestones_test_learningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestones_test_learningApp.swift; sourceTree = "<group>"; };
+		5A9B7CBF2BEA5653008BE6BC /* Milestone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milestone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9B7CC22BEA5653008BE6BC /* MilestoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneApp.swift; sourceTree = "<group>"; };
 		5A9B7CC42BEA5653008BE6BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5A9B7CC62BEA5654008BE6BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9B7CC92BEA5654008BE6BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		5A9B7CB62BEA5653008BE6BC = {
 			isa = PBXGroup;
 			children = (
-				5A9B7CC12BEA5653008BE6BC /* Milestones test learning */,
+				5A9B7CC12BEA5653008BE6BC /* Milestone */,
 				5A9B7CC02BEA5653008BE6BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,15 +51,15 @@
 		5A9B7CC02BEA5653008BE6BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A9B7CBF2BEA5653008BE6BC /* Milestones test learning.app */,
+				5A9B7CBF2BEA5653008BE6BC /* Milestone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5A9B7CC12BEA5653008BE6BC /* Milestones test learning */ = {
+		5A9B7CC12BEA5653008BE6BC /* Milestone */ = {
 			isa = PBXGroup;
 			children = (
-				5A9B7CC22BEA5653008BE6BC /* Milestones_test_learningApp.swift */,
+				5A9B7CC22BEA5653008BE6BC /* MilestoneApp.swift */,
 				5A9B7CC42BEA5653008BE6BC /* ContentView.swift */,
 				5A84C8D92BECABCF004D0687 /* SettingsView.swift */,
 				5A318A572BEBDD5500F4C38F /* AnimatedGradBackground.swift */,
@@ -67,7 +67,7 @@
 				5A9B7CC62BEA5654008BE6BC /* Assets.xcassets */,
 				5A9B7CC82BEA5654008BE6BC /* Preview Content */,
 			);
-			path = "Milestones test learning";
+			path = Milestone;
 			sourceTree = "<group>";
 		};
 		5A9B7CC82BEA5654008BE6BC /* Preview Content */ = {
@@ -81,9 +81,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A9B7CBE2BEA5653008BE6BC /* Milestones test learning */ = {
+		5A9B7CBE2BEA5653008BE6BC /* Milestone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A9B7CCD2BEA5654008BE6BC /* Build configuration list for PBXNativeTarget "Milestones test learning" */;
+			buildConfigurationList = 5A9B7CCD2BEA5654008BE6BC /* Build configuration list for PBXNativeTarget "Milestone" */;
 			buildPhases = (
 				5A9B7CBB2BEA5653008BE6BC /* Sources */,
 				5A9B7CBC2BEA5653008BE6BC /* Frameworks */,
@@ -93,12 +93,12 @@
 			);
 			dependencies = (
 			);
-			name = "Milestones test learning";
+			name = Milestone;
 			packageProductDependencies = (
 				5A9B7CDC2BEBD8F6008BE6BC /* MulticolorGradient */,
 			);
 			productName = "Milestones test learning";
-			productReference = 5A9B7CBF2BEA5653008BE6BC /* Milestones test learning.app */;
+			productReference = 5A9B7CBF2BEA5653008BE6BC /* Milestone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5A9B7CBA2BEA5653008BE6BC /* Build configuration list for PBXProject "Milestones test learning" */;
+			buildConfigurationList = 5A9B7CBA2BEA5653008BE6BC /* Build configuration list for PBXProject "Milestone" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -132,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A9B7CBE2BEA5653008BE6BC /* Milestones test learning */,
+				5A9B7CBE2BEA5653008BE6BC /* Milestone */,
 			);
 		};
 /* End PBXProject section */
@@ -158,7 +158,7 @@
 				5A9B7CC52BEA5653008BE6BC /* ContentView.swift in Sources */,
 				5A318A582BEBDD5500F4C38F /* AnimatedGradBackground.swift in Sources */,
 				5A9B7CDA2BEB9674008BE6BC /* MetalFilea.metal in Sources */,
-				5A9B7CC32BEA5653008BE6BC /* Milestones_test_learningApp.swift in Sources */,
+				5A9B7CC32BEA5653008BE6BC /* MilestoneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +291,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Milestones test learning/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Milestone/Preview Content\"";
 				DEVELOPMENT_TEAM = G2S5NXG875;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -320,7 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Milestones test learning/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Milestone/Preview Content\"";
 				DEVELOPMENT_TEAM = G2S5NXG875;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -345,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A9B7CBA2BEA5653008BE6BC /* Build configuration list for PBXProject "Milestones test learning" */ = {
+		5A9B7CBA2BEA5653008BE6BC /* Build configuration list for PBXProject "Milestone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A9B7CCB2BEA5654008BE6BC /* Debug */,
@@ -354,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A9B7CCD2BEA5654008BE6BC /* Build configuration list for PBXNativeTarget "Milestones test learning" */ = {
+		5A9B7CCD2BEA5654008BE6BC /* Build configuration list for PBXNativeTarget "Milestone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A9B7CCE2BEA5654008BE6BC /* Debug */,

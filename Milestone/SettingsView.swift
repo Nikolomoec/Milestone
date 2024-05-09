@@ -9,10 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                
-            }
+        LazyVStack {
+            
         }
     }
 }
@@ -21,24 +19,3 @@ struct SettingsView: View {
     SettingsView()
 }
 
-struct SettingsTopBar: View {
-    var title: String
-    
-    var backButtonOn = true
-    var leaveSheetButtonOn = true
-    
-    var body: some View {
-        HStack {
-            if backButtonOn {
-                Image(systemName: "chevron.left")
-            }
-            
-            Text(title)
-            
-            if leaveSheetButtonOn {
-                Image(systemName: "checkmark")
-            }
-        }
-        .foregroundStyle(.white)
-    }
-}
