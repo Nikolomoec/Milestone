@@ -15,6 +15,7 @@
 		5A9B7CCA2BEA5654008BE6BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9B7CC92BEA5654008BE6BC /* Preview Assets.xcassets */; };
 		5A9B7CDA2BEB9674008BE6BC /* MetalFilea.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B7CD92BEB9674008BE6BC /* MetalFilea.metal */; };
 		5A9B7CDD2BEBD8F6008BE6BC /* MulticolorGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 5A9B7CDC2BEBD8F6008BE6BC /* MulticolorGradient */; };
+		5AFBC4442BECDA7600F74590 /* Setting in Frameworks */ = {isa = PBXBuildFile; productRef = 5AFBC4432BECDA7600F74590 /* Setting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9B7CDD2BEBD8F6008BE6BC /* MulticolorGradient in Frameworks */,
+				5AFBC4442BECDA7600F74590 /* Setting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,7 @@
 			name = Milestone;
 			packageProductDependencies = (
 				5A9B7CDC2BEBD8F6008BE6BC /* MulticolorGradient */,
+				5AFBC4432BECDA7600F74590 /* Setting */,
 			);
 			productName = "Milestones test learning";
 			productReference = 5A9B7CBF2BEA5653008BE6BC /* Milestone.app */;
@@ -127,6 +130,7 @@
 			mainGroup = 5A9B7CB62BEA5653008BE6BC;
 			packageReferences = (
 				5A9B7CDB2BEBD8F6008BE6BC /* XCRemoteSwiftPackageReference "SwiftUI-MulticolorGradient" */,
+				5AFBC4422BECDA7600F74590 /* XCRemoteSwiftPackageReference "Setting" */,
 			);
 			productRefGroup = 5A9B7CC02BEA5653008BE6BC /* Products */;
 			projectDirPath = "";
@@ -374,6 +378,14 @@
 				kind = branch;
 			};
 		};
+		5AFBC4422BECDA7600F74590 /* XCRemoteSwiftPackageReference "Setting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aheze/Setting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -381,6 +393,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5A9B7CDB2BEBD8F6008BE6BC /* XCRemoteSwiftPackageReference "SwiftUI-MulticolorGradient" */;
 			productName = MulticolorGradient;
+		};
+		5AFBC4432BECDA7600F74590 /* Setting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AFBC4422BECDA7600F74590 /* XCRemoteSwiftPackageReference "Setting" */;
+			productName = Setting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

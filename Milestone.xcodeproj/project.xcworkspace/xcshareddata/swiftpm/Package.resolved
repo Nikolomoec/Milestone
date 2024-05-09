@@ -1,6 +1,15 @@
 {
-  "originHash" : "9db9c603281a157ca42749acaad8ffdce5fec17210290519e327adccd2d3dfff",
+  "originHash" : "cfce1fa8acd988784928e4ba5687e5cdbcbac28e2ad3503b280008388db8ccb5",
   "pins" : [
+    {
+      "identity" : "setting",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/aheze/Setting.git",
+      "state" : {
+        "revision" : "f506b13b2024fc3e7585b6e4f8290f6f1525127c",
+        "version" : "1.0.1"
+      }
+    },
     {
       "identity" : "swiftui-multicolorgradient",
       "kind" : "remoteSourceControl",
