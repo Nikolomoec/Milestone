@@ -15,6 +15,9 @@ struct ContentView: View {
     
     @State private var isSettingsPressed = false
     
+    @State private var isButtonPressed = false
+    @State private var buttonPressSeconds = 0 // How long the button has been pressed
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -55,7 +58,6 @@ struct ContentView: View {
                                         .offset(y: geo.size.height / 60)
                                 }
                             }
-                            
                             
                             // Sides
                             HStack {
@@ -117,14 +119,15 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        // MARK: Text
+                        // MARK: Text and Goal Button
                         VStack {
                             Spacer()
                             
-                            Circle()
-                                .frame(width: 180)
-                                .opacity(0.8)
+                            Text(String(buttonPressSeconds))
+                            // Goal Button
+                            GoalButtonView()
                             
+                            // Text
                             VStack(alignment: .center) {
                                 Text("The Hardest Part")
                                     .font(.title3.bold())
