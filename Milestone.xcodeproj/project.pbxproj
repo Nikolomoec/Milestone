@@ -16,6 +16,8 @@
 		5A9B7CDA2BEB9674008BE6BC /* MetalFilea.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B7CD92BEB9674008BE6BC /* MetalFilea.metal */; };
 		5A9B7CDD2BEBD8F6008BE6BC /* MulticolorGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 5A9B7CDC2BEBD8F6008BE6BC /* MulticolorGradient */; };
 		5AFBC4442BECDA7600F74590 /* Setting in Frameworks */ = {isa = PBXBuildFile; productRef = 5AFBC4432BECDA7600F74590 /* Setting */; };
+		5AFCAD7B2BED10A60017C0F2 /* ShareAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFCAD7A2BED10A60017C0F2 /* ShareAppView.swift */; };
+		5AFCAD7D2BED11150017C0F2 /* ReportABugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFCAD7C2BED11150017C0F2 /* ReportABugView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		5A9B7CC62BEA5654008BE6BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9B7CC92BEA5654008BE6BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A9B7CD92BEB9674008BE6BC /* MetalFilea.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalFilea.metal; sourceTree = "<group>"; };
+		5AFCAD7A2BED10A60017C0F2 /* ShareAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAppView.swift; sourceTree = "<group>"; };
+		5AFCAD7C2BED11150017C0F2 /* ReportABugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportABugView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				5A9B7CC22BEA5653008BE6BC /* MilestoneApp.swift */,
 				5A9B7CC42BEA5653008BE6BC /* ContentView.swift */,
 				5A84C8D92BECABCF004D0687 /* SettingsView.swift */,
+				5AFCAD7A2BED10A60017C0F2 /* ShareAppView.swift */,
+				5AFCAD7C2BED11150017C0F2 /* ReportABugView.swift */,
 				5A318A572BEBDD5500F4C38F /* AnimatedGradBackground.swift */,
 				5A9B7CD92BEB9674008BE6BC /* MetalFilea.metal */,
 				5A9B7CC62BEA5654008BE6BC /* Assets.xcassets */,
@@ -158,9 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFCAD7B2BED10A60017C0F2 /* ShareAppView.swift in Sources */,
 				5A84C8DA2BECABCF004D0687 /* SettingsView.swift in Sources */,
 				5A9B7CC52BEA5653008BE6BC /* ContentView.swift in Sources */,
 				5A318A582BEBDD5500F4C38F /* AnimatedGradBackground.swift in Sources */,
+				5AFCAD7D2BED11150017C0F2 /* ReportABugView.swift in Sources */,
 				5A9B7CDA2BEB9674008BE6BC /* MetalFilea.metal in Sources */,
 				5A9B7CC32BEA5653008BE6BC /* MilestoneApp.swift in Sources */,
 			);

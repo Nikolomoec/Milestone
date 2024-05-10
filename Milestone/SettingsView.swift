@@ -7,8 +7,10 @@
 
 import SwiftUI
 import Setting
+import StoreKit
 
 struct SettingsView: View {
+    @Environment(\.requestReview) var requestReview
     
     @State private var isMilestonePlusOn = false
     @State private var isShowingShareScreen = false
@@ -55,17 +57,17 @@ struct SettingsView: View {
                     // Additional
                     SettingGroup {
                         SettingButton(title: "Rate on Appstore") {
-                            
+                            requestReview()
                         }
                         .icon("heart.fill", color: Color(red: 0.80, green: 0.27, blue: 0.19))
                         
                         SettingButton(title: "Share") {
-                            
+                            isShowingShareScreen = true
                         }
                         .icon("person.2.fill", color: Color(red: 0.46, green: 0.51, blue: 0.56))
                         
                         SettingButton(title: "Report a Bug") {
-                            
+                            isShowingReportABugScreen = true
                         }
                         .icon("exclamationmark.triangle.fill", color: Color(red: 0.51, green: 0.40, blue: 0.33))
                     }
@@ -73,10 +75,10 @@ struct SettingsView: View {
                     // Media and Terms
                     
                     SettingGroup {
-                        SettingButton(title: "Follow on Twitter") { openTwitterProfile()
+                        SettingButton(title: "Follow on Twitter") {
+                            openTwitterProfile()
                         }
-                        .icon("bird.fill", color: Color(red: 0.27, green: 0.38, blue: 0.38))
-                        
+                        .icon(icon: .image(name: "Twitter", inset: 6, foregroundColor: .white, backgroundColor: Color(red: 0.11, green: 0.61, blue: 0.94)))
                         SettingPage(title: "Terms and Privacy") {
                             
                         }

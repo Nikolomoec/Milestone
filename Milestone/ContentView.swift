@@ -162,7 +162,7 @@ struct ContentView: View {
                 .padding(.top, 40)
             }
             .sheet(isPresented: $isSettingsPressed) {
-                
+                SettingsView()
             }      
         }
         .ignoresSafeArea()
