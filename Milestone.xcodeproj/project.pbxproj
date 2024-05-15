@@ -16,6 +16,7 @@
 		5A9B7CCA2BEA5654008BE6BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9B7CC92BEA5654008BE6BC /* Preview Assets.xcassets */; };
 		5A9B7CDA2BEB9674008BE6BC /* MetalFilea.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B7CD92BEB9674008BE6BC /* MetalFilea.metal */; };
 		5A9B7CDD2BEBD8F6008BE6BC /* MulticolorGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 5A9B7CDC2BEBD8F6008BE6BC /* MulticolorGradient */; };
+		5AAE4DE62BEE30C100895A8F /* DashLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE4DE52BEE30C100895A8F /* DashLine.swift */; };
 		5AFBC4442BECDA7600F74590 /* Setting in Frameworks */ = {isa = PBXBuildFile; productRef = 5AFBC4432BECDA7600F74590 /* Setting */; };
 		5AFCAD7B2BED10A60017C0F2 /* ShareAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFCAD7A2BED10A60017C0F2 /* ShareAppView.swift */; };
 		5AFCAD7D2BED11150017C0F2 /* ReportABugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFCAD7C2BED11150017C0F2 /* ReportABugView.swift */; };
@@ -31,6 +32,7 @@
 		5A9B7CC62BEA5654008BE6BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9B7CC92BEA5654008BE6BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A9B7CD92BEB9674008BE6BC /* MetalFilea.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalFilea.metal; sourceTree = "<group>"; };
+		5AAE4DE52BEE30C100895A8F /* DashLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashLine.swift; sourceTree = "<group>"; };
 		5AFCAD7A2BED10A60017C0F2 /* ShareAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAppView.swift; sourceTree = "<group>"; };
 		5AFCAD7C2BED11150017C0F2 /* ReportABugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportABugView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3C38552BF3466200CB8299 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AAE4DE52BEE30C100895A8F /* DashLine.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5A95144C2BEE0D0400A60DFD /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 				5A82D1132BEE1C5E00106A77 /* GoalButtonView.swift */,
 				5A95144C2BEE0D0400A60DFD /* Settings */,
 				5A95144D2BEE0D1400A60DFD /* Customization */,
+				5A3C38552BF3466200CB8299 /* Models */,
 				5A9B7CC62BEA5654008BE6BC /* Assets.xcassets */,
 				5A9B7CC82BEA5654008BE6BC /* Preview Content */,
 			);
@@ -189,6 +200,7 @@
 				5A9B7CC52BEA5653008BE6BC /* ContentView.swift in Sources */,
 				5A318A582BEBDD5500F4C38F /* AnimatedGradBackground.swift in Sources */,
 				5AFCAD7D2BED11150017C0F2 /* ReportABugView.swift in Sources */,
+				5AAE4DE62BEE30C100895A8F /* DashLine.swift in Sources */,
 				5A9B7CDA2BEB9674008BE6BC /* MetalFilea.metal in Sources */,
 				5A9B7CC32BEA5653008BE6BC /* MilestoneApp.swift in Sources */,
 			);

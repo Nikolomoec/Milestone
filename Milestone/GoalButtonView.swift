@@ -15,11 +15,11 @@ struct GoalButtonView: View {
     
     @State private var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
+    @State private var linesArray = [DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine(), DashLine()]
+    @State private var nextCreationTime = Date.now
+    
     var body: some View {
         ZStack {
-            Color.red
-                .ignoresSafeArea()
-            
             Circle()
                 .frame(width: 180)
                 .opacity(0.8)
@@ -28,8 +28,18 @@ struct GoalButtonView: View {
                         .frame(width: howLongButtonPressed * 10)
                         .foregroundStyle(.white)
                 }
+            
+            ForEach(Array(linesArray.enumerated()), id: \.element) { index, line in
+                Rectangle()
+                    .foregroundStyle(.white)
+                    .rotationEffect(line.angle + .degrees(90))
+                    .frame(width: line.width, height: line.height)
+                    .offset(x: isPressing ? 0 : line.xStart, y: isPressing ? 0 : line.yStart)
+                    .animation(.easeIn(duration: line.duration).speed(isPressing ? 1 : 100), value: isPressing)
+                    .opacity(isPressing ? howLongButtonPressed / 7 : 0)
+            }
         }
-        .onLongPressGesture(minimumDuration: 1.4, maximumDistance: 20) {
+        .onLongPressGesture(minimumDuration: 1.5, maximumDistance: 20) {
             completedLongPress = true
             howLongButtonPressed = 0
         } onPressingChanged: { isPressing in
@@ -37,7 +47,10 @@ struct GoalButtonView: View {
             
             if !isPressing {
                 timer.upstream.connect().cancel()
-                howLongButtonPressed = 0
+                
+                withAnimation {
+                    howLongButtonPressed = 0
+                }
             } else {
                 timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
             }
