@@ -126,7 +126,7 @@ struct ContentView: View {
                                 .overlay {
                                     GoalButtonView()
                                 }
-                                .clipShape(Circle())
+                                .scaleEffect(0.9)
                             
                             // Text
                             VStack(alignment: .center) {
