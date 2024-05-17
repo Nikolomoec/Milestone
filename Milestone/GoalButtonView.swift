@@ -4,13 +4,18 @@
 //
 //  Created by Nikita Kolomoec on 10.05.2024.
 //
+// Sizes
+// Width:  393.0
+// Height: 852.0
 
 import SwiftUI
 
 struct GoalButtonView: View {
     
     @State private var isPressing = false
-    @State private var completedLongPress = false
+    
+    @Binding var completedLongPress: Bool
+    
     @State private var howLongButtonPressed = 0.0
     
     @State private var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
@@ -28,11 +33,17 @@ struct GoalButtonView: View {
     
     var body: some View {
         ZStack {
+            Circle()
+                .foregroundStyle(.white)
+                .frame(width: completedLongPress ? 250 : 0)
+                .animation(.easeInOut(duration: 0.7).delay(1), value: completedLongPress)
+                .opacity(completedLongPress ? 1 : 0)
+            
             // 3 random "Impact Rectangles" when button long press is completed
             ForEach(0..<5) { num in
                 ImpactRectangle()
-                    .frame(width: Double.random(in: 10...60), height: completedLongPress ? 300 : 0)
-                    .padding(.top, 200)
+                    .frame(width: Double.random(in: 10...60), height: completedLongPress ? 200 : 0)
+                    .padding(.top, 300)
                     .foregroundStyle(randomImpactRectangleColor[num])
                     .rotationEffect(.degrees(Double(70 * num)))
                     .animation(.default, value: completedLongPress)
@@ -44,17 +55,13 @@ struct GoalButtonView: View {
             // Start Button
             Circle()
                 .frame(width: 180)
-                .opacity(0.8)
+                .opacity(completedLongPress ? 0 : 0.8)
                 .overlay {
                     Circle()
                         .frame(width: howLongButtonPressed * 10)
                         .foregroundStyle(.white)
                     
                     if completedLongPress {
-//                        AnimatedGradBackground(type: .vibes)
-//                            .mask {
-//                                Circle()
-//                            }
                         Circle()
                             .foregroundStyle(.white)
                     }
@@ -113,7 +120,6 @@ struct GoalButtonView: View {
         .disabled(completedLongPress)
         .onReceive(timer) { _ in
             howLongButtonPressed += 0.15
-            print(howLongButtonPressed)
         }
         .onAppear {
             timer.upstream.connect().cancel()
@@ -125,7 +131,7 @@ struct GoalButtonView: View {
     ZStack {
         AnimatedGradBackground(type: .blackWhite)
         
-        GoalButtonView()
+        GoalButtonView(completedLongPress: .constant(false))
     }
 }
 

@@ -15,6 +15,8 @@ struct ContentView: View {
     
     @State private var isSettingsPressed = false
     
+    @State private var completedLongPress = false
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -121,13 +123,19 @@ struct ContentView: View {
                             Spacer()
                             
                             // Goal Button
-                            Circle()
-                                .opacity(0)
-                                .overlay {
-                                    GoalButtonView()
-                                }
-                                .scaleEffect(0.9)
-                            
+                            if !completedLongPress {
+                                Circle()
+                                    .opacity(0)
+                                    .overlay {
+                                        GoalButtonView(completedLongPress: $completedLongPress)
+                                    }
+                                    .scaleEffect(0.9)
+                                    .transition(
+                                        .asymmetric(
+                                            insertion: .opacity,
+                                            removal: .scale.animation(.easeInOut.delay(2.5))
+                                        ))
+                            }
                             // Text
                             VStack(alignment: .center) {
                                 Text("The Hardest Part")
@@ -167,7 +175,7 @@ struct ContentView: View {
             }
             .sheet(isPresented: $isSettingsPressed) {
                 SettingsView()
-            }      
+            }     
         }
         .ignoresSafeArea()
     }
