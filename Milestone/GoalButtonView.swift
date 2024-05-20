@@ -102,7 +102,9 @@ struct GoalButtonView: View {
             }
         }
         .onLongPressGesture(minimumDuration: 1.3, maximumDistance: 20) {
-            completedLongPress = true
+            withAnimation {
+                completedLongPress = true
+            }
             howLongButtonPressed = 0
         } onPressingChanged: { isPressing in
             self.isPressing = isPressing

@@ -17,6 +17,10 @@ struct ContentView: View {
     
     @State private var completedLongPress = false
     
+    // Used for animations and transitions
+    @State private var showTransitionText = true
+    @State private var showMainButton = true
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -77,7 +81,7 @@ struct ContentView: View {
                                 ForEach(0..<2) { num in
                                     Spacer()
                                     
-                                    // Left side mini bar
+                                    // Checkpoints
                                     HStack(spacing: 0) {
                                         UnevenRoundedRectangle(cornerRadii: .init(topLeading: 3, bottomLeading: 3))
                                             .foregroundStyle(Color(white: 0.5))
@@ -123,7 +127,7 @@ struct ContentView: View {
                             Spacer()
                             
                             // Goal Button
-                            if !completedLongPress {
+                            if showMainButton {
                                 Circle()
                                     .opacity(0)
                                     .overlay {
@@ -132,21 +136,28 @@ struct ContentView: View {
                                     .scaleEffect(0.9)
                                     .transition(
                                         .asymmetric(
-                                            insertion: .opacity,
-                                            removal: .scale.animation(.easeInOut.delay(2.5))
+                                            insertion: .move(edge: .top).combined(with: .opacity),
+                                            removal: .scale
                                         ))
                             }
                             // Text
-                            VStack(alignment: .center) {
-                                Text("The Hardest Part")
-                                    .font(.title3.bold())
-                                Text("This is actually the most important step you can take")
+                            if showTransitionText {
+                                VStack(alignment: .center) {
+                                    Text("The Hardest Part")
+                                        .font(.title3.bold())
+                                    
+                                    Text("This is actually the most important step you can take")
+                                }
+                                .foregroundStyle(.white)
+                                .frame(width: geo.size.width / 1.8, height: geo.size.height / 4, alignment: .center)
+                                .transition(
+                                    .asymmetric(
+                                        insertion: .move(edge: .top).combined(with: .opacity),
+                                        removal: .move(edge: .bottom).combined(with: .opacity)
+                                    ))
                             }
-                            .foregroundStyle(.white)
-                            .frame(width: geo.size.width / 1.8, height: geo.size.height / 4, alignment: .center)
                         }
-                        .padding(.bottom, geo.size.height / 10)
-                        .offset(x: isLinePressed ? geo.size.width * 1.3 : 0)
+                        .offset(x: isLinePressed ? geo.size.width * 1.3 : 0, y: -(geo.size.height / 10))
                         .animation(.easeInOut.speed(0.3), value: isLinePressed)
                         
                         Spacer()
@@ -176,6 +187,27 @@ struct ContentView: View {
             .sheet(isPresented: $isSettingsPressed) {
                 SettingsView()
             }     
+            .onChange(of: completedLongPress) {
+                if completedLongPress {
+                    // Set the property for text transition
+                    withAnimation(.easeInOut(duration: 1.7).delay(2.5)) {
+                        showTransitionText = false
+                        completedLongPress = true
+                    }
+                    
+                    withAnimation(.easeInOut.delay(2.5)) {
+                        showMainButton = false
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
+                        withAnimation(.easeInOut(duration: 1.7).delay(2.5)) {
+                            showTransitionText = true
+                            showMainButton = true
+                            completedLongPress = false
+                        }
+                    }
+                }
+            }
         }
         .ignoresSafeArea()
     }
